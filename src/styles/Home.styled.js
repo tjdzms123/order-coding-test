@@ -8,11 +8,13 @@ export const StHome = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 30px;
 `;
 
 export const StLogo = styled.img`
-  width: 150px;
-  height: 50px;
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
 `;
 
 export const StGoOrderBtn = styled.button`
@@ -20,4 +22,6 @@ export const StGoOrderBtn = styled.button`
   height: 88px;
   border-radius: 20px;
   background-color: #ffffff;
+  font-size: 25px;
+  color: #000000;
 `;

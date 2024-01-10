@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
+import OrderHeader from '../components/OrderHeader';
+import OrderFooter from '../components/OrderFooter';
+import OrderBody from '../components/OrderBody';
 
 function Order() {
+
+  
   return (
-    <div>
-      order
-    </div>
-  )
+    <>
+      <OrderHeader />
+      <OrderBody />
+      <OrderFooter />
+    </>
+  );
 }
 
-export default Order
+export default Order;

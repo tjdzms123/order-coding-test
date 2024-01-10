@@ -10,6 +10,8 @@ function Home() {
         <StLogo
           src="/img/logo-black.png"
           alt="반장창고"
+          width={'150px'}
+          height={'50px'}
         />
       </div>
       <div>
