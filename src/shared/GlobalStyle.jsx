@@ -18,5 +18,6 @@ export const GlobalStyle = styled.createGlobalStyle`
     min-height: 100vh;
     margin: 0 auto;
     border: 1px solid gray;
+    overflow: hidden;
   }
 `;

@@ -11,6 +11,8 @@ export const StFooterBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  z-index: 10;
+  background-color: #ffffff;
 `;
 
 export const StCountBox = styled.div`
