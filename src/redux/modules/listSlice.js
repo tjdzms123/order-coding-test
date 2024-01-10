@@ -25,9 +25,18 @@ export const listSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: builder => {
-    builder.addCase(__getLists.fulfilled, (state, action) => {
-      state.lists = action.payload;
-    });
+    builder
+      .addCase(__getLists.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(__getLists.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.lists = action.payload;
+      })
+      .addCase(__getLists.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = action.error.message;
+      });
   },
 });
 

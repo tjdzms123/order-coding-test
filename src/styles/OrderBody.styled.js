@@ -6,7 +6,8 @@ export const StOrderBox = styled.div`
   justify-content: center;
   padding: 20px;
   gap: 20px;
-  overflow: hidden;
+  margin-top: 57px;
+  position: relative;
 `;
 
 export const StOrderList = styled.div`

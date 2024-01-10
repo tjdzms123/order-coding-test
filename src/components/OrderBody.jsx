@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import {
   StCount,
@@ -12,10 +12,25 @@ import {
   StOrderList,
 } from '../styles/OrderBody.styled';
 
-function OrderBody() {
-  const lists = useSelector(state => state.listSlice.lists);
-  const newLists = lists.map(e => ({ ...e, count: 0 }));
-  console.log(newLists);
+function OrderBody({
+  lists,
+  handleDecrement,
+  handleIncrement,
+  itemQuantities,
+}) {
+  const isLoading = useSelector(state => state.listSlice.isLoading);
+
+  if (isLoading) {
+    return (
+      <div>
+        <p>
+          목록을 <br />
+          불러오고 있습니다.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <StOrderBox>
       {lists.map(list => {
@@ -29,9 +44,13 @@ function OrderBody() {
               </StListName>
               <StNumber>
                 <StCount>
-                  <StCountBtn>-</StCountBtn>
-                  <p>0</p>
-                  <StCountBtn>+</StCountBtn>
+                  <StCountBtn onClick={() => handleDecrement(list.id)}>
+                    -
+                  </StCountBtn>
+                  <p>{itemQuantities[list.id]}</p>
+                  <StCountBtn onClick={() => handleIncrement(list.id)}>
+                    +
+                  </StCountBtn>
                 </StCount>
                 <div>
                   <span>{list.price.toLocaleString()}원</span>
