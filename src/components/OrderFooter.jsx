@@ -5,9 +5,21 @@ import {
   StOrderBtn,
 } from '../styles/OrderFooter.styled';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function OrderFooter({ totalQuantity, totalPrice }) {
   const navi = useNavigate();
+
+  const isLoading = useSelector(state => state.listSlice.isLoading);
+
+  const onClickOrderBtn = () => {
+    if (totalQuantity === 0) {
+      alert('재고를 선택해 주세요');
+    } else {
+      navi('/complete');
+    }
+  };
+
   return (
     <StFooterBox>
       <StCountBox>
@@ -15,7 +27,16 @@ function OrderFooter({ totalQuantity, totalPrice }) {
         <p>총 가격 : {totalPrice}원</p>
       </StCountBox>
       <div>
-        <StOrderBtn onClick={() => navi('/complete')}>주문하기</StOrderBtn>
+        {isLoading ? (
+          <StOrderBtn
+            onClick={onClickOrderBtn}
+            style={{ backgroundColor: '#C1C1C1' }}
+          >
+            주문하기
+          </StOrderBtn>
+        ) : (
+          <StOrderBtn onClick={onClickOrderBtn}>주문하기</StOrderBtn>
+        )}
       </div>
     </StFooterBox>
   );

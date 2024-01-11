@@ -18,6 +18,7 @@ function OrderBody({
   handleIncrement,
   itemQuantities,
 }) {
+  
   const isLoading = useSelector(state => state.listSlice.isLoading);
 
   if (isLoading) {
