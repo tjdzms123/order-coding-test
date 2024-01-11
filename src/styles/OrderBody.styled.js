@@ -18,7 +18,6 @@ export const StOrderList = styled.div`
   padding: 10px;
   display: flex;
   gap: 10px;
-  /* background: #f75a2f1a; */
 `;
 
 export const StImgbox = styled.div`

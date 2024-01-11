@@ -34,8 +34,13 @@ function OrderBody({
   return (
     <StOrderBox>
       {lists.map(list => {
+        const listItemStyle =
+          itemQuantities[list.id] > 0 ? { backgroundColor: ' #f75a2f1a' } : {};
         return (
-          <StOrderList key={list.id}>
+          <StOrderList
+            key={list.id}
+            style={listItemStyle}
+          >
             <StImgbox></StImgbox>
             <StInforbox>
               <StListName>
