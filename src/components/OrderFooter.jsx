@@ -4,9 +4,10 @@ import {
   StFooterBox,
   StOrderBtn,
 } from '../styles/OrderFooter.styled';
+import { useNavigate } from 'react-router-dom';
 
 function OrderFooter({ totalQuantity, totalPrice }) {
-  
+  const navi = useNavigate();
   return (
     <StFooterBox>
       <StCountBox>
@@ -14,7 +15,7 @@ function OrderFooter({ totalQuantity, totalPrice }) {
         <p>총 가격 : {totalPrice}원</p>
       </StCountBox>
       <div>
-        <StOrderBtn>주문하기</StOrderBtn>
+        <StOrderBtn onClick={() => navi('/complete')}>주문하기</StOrderBtn>
       </div>
     </StFooterBox>
   );

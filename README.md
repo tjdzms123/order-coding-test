@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+**. 2024년 (주) 두번째 프론트엔드 개발자 채용 과제**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**1. 기술 스택**
 
-## Available Scripts
+- React.js: 사용자 인터페이스를 만들기 위한 라이브러리
+- Redux: 전역 상태 관리를 위한 라이브러리
+- Axios: 서버와의 HTTP 통신을 위한 라이브러리
+- Styled-components: CSS-in-JS 라이브러리로 스타일을 동적으로 관리
 
-In the project directory, you can run:
+**2. 빌드 방법**
 
-### `yarn start`
+- **의존성 설치**: 프로젝트 루트 폴더에서 다음 명령어를 실행하여 필요한 패키지를 설치합니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ```bash
+  npm install
+  ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **환경 변수 설정**: 서비스에서 사용하는 환경 변수를 설정합니다.
 
-### `yarn test`
+  ```bash
+  # .env 파일 생성
+  touch .env
+  ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  .env 파일에는 서비스에서 사용하는 환경 변수를 설정합니다.
 
-### `yarn build`
+  ```env
+  REACT_APP_API_URL=https://api.interiorhub.com
+  ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **로컬 서버 실행**: 다음 명령어로 개발 서버를 실행합니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```bash
+  npm start
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **빌드**: 서비스를 빌드하여 배포할 준비를 합니다.
 
-### `yarn eject`
+  ```bash
+  npm run build
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**5. 빌드한 서비스 확인 방법**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 서비스를 로컬 환경에서 실행한 경우, 웹 브라우저에서 `http://localhost:3000`을 열어 확인할 수 있습니다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- 실제 서버에 배포한 경우, 배포된 URL을 통해 서비스에 접속하여 확인할 수 있습니다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이와 같은 README.md를 작성하면 프로젝트에 대한 정보와 사용 방법을 알기 쉽게 전달할 수 있습니다.
