@@ -22,12 +22,6 @@
   touch .env
   ```
 
-  .env 파일에는 서비스에서 사용하는 환경 변수를 설정합니다.
-
-  ```env
-  REACT_APP_API_URL=https://api.interiorhub.com
-  ```
-
 - **로컬 서버 실행**: 다음 명령어로 개발 서버를 실행합니다.
 
   ```bash
